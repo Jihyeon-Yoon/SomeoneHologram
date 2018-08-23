@@ -1,16 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    xmlns:andorid="http://schemas.android.com/apk/res-auto"
+    android:background="#000000"
+    android:orientation="vertical"
     tools:context=".TimeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- Display the text for analog clock-->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textColor="#ffffff"
-        android:text="Time" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Analog Clock"
+        android:layout_gravity="center"
+        android:textColor="#b58f30"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
 
-</FrameLayout>
+    <!-- Display the analog clock on the screen-->
+    <AnalogClock
+        android:id="@+id/analogClock"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Display the text for digital clock-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Digital Clock"
+        android:layout_gravity="center"
+        android:textColor="#b58f30"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <!-- Display the digital clock on the screen-->
+    <DigitalClock
+        android:id="@+id/digitalClock"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DigitalClock"
+        android:textStyle="bold"
+        android:textColor="#ffffff"/>
+
+    <!-- Display the text for date-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Date"
+        android:layout_gravity="center"
+        android:textColor="#b58f30"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <!-- Display the current date-->
+    <TextView
+        android:id="@+id/date"
+        android:textSize="20dp"
+        android:hint="Date"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+</LinearLayout>
